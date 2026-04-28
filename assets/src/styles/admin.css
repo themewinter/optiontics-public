@@ -1,0 +1,73 @@
+@import "./base";
+
+.toplevel_page_optiontics .wrap,
+.dokan-dashboard .wrap {
+    @apply m-0;
+}
+
+.opt-page-transition {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    font-family: var(--font-family);
+}
+
+@keyframes opt-page-in {
+    from {
+        opacity: 0;
+        transform: translateY(3px) scale(0.999);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.opt-page-transition {
+    animation: opt-page-in 220ms ease-out both;
+}
+
+/* Sidebar fills the screen height in WP admin full-screen editor */
+.toplevel_page_optiontics .opt-builder-control-sidebar,
+.dokan-dashboard .opt-builder-control-sidebar {
+    min-height: calc(100vh - 150px);
+}
+
+@media screen and (max-width: 782px) {
+    .toplevel_page_optiontics .wp-responsive-open #wpbody,
+    .dokan-dashboard .wp-responsive-open #wpbody {
+        right: 0;
+    }
+}
+
+.toplevel_page_optiontics .opt-radio-item,
+.dokan-dashboard .opt-radio-item {
+    @apply border-input text-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 aspect-square size-4 shrink-0 rounded-full border shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50;
+}
+.toplevel_page_optiontics .opt-radio-item-indicator,
+.dokan-dashboard .opt-radio-item-indicator {
+    @apply relative flex items-center justify-center;
+}
+.toplevel_page_optiontics
+    .opt-radio-item-indicator
+    .opt-radio-item-indicator-circle,
+.dokan-dashboard .opt-radio-item-indicator .opt-radio-item-indicator-circle {
+    @apply fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.toplevel_page_optiontics .opt-input-grp-addon-radio,
+.dokan-dashboard .opt-input-grp-addon-radio {
+    @apply p-0 border-gray-300;
+}
+.toplevel_page_optiontics .opt-input-grp-addon-radio-inner,
+.dokan-dashboard .opt-input-grp-addon-radio-inner {
+    @apply w-full h-full rounded-full bg-white scale-50;
+}
+.toplevel_page_optiontics .opt-switch-thumb,
+.dokan-dashboard .opt-switch-thumb {
+    @apply pointer-events-none absolute left-1 top-1 h-4 w-4 rounded-full bg-background shadow transition-transform duration-200 data-[state=checked]:translate-x-5 flex items-center justify-center;
+}
+
+[role="alertdialog"] {
+    @apply bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg border-neutral-200;
+}

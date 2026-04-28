@@ -1,0 +1,1971 @@
+/* ----------- Optiontics multivendor css support -----------------*/
+@import "./base.css";
+
+#optiontics-vendor-dashboard {
+	width: 100%;
+	max-width: calc(100% - 250px);
+	padding: 20px;
+	position: relative;
+	margin: 0 auto;
+	font-family: var(--font-family);
+}
+/* media query */
+/* tablet view */
+@media (max-width: 1180px) {
+	#optiontics-vendor-dashboard {
+		max-width: calc(100% - 100px); /* subtract the dokan collapsed sidebar*/
+		padding: 10px;
+	}
+}
+
+/* mobile view */
+@media (max-width: 662px) {
+	#optiontics-vendor-dashboard {
+		max-width: calc(100% - 20px); /* subtract the dokan collapsed sidebar*/
+		padding: 10px;
+	}
+}
+
+#optiontics-vendor-dashboard .opt-addon-list-add-btn {
+	@apply items-center justify-center whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] bg-primary text-neutral-100 hover:bg-primary-400 active:bg-primary-400 disabled:bg-primary-200 h-10 px-4 text-sm has-[>svg]:px-3 sm:h-11 sm:px-6 sm:text-base flex gap-2 border-none;
+}
+
+#optiontics-vendor-dashboard .opt-switch {
+	@apply relative inline-flex h-6 w-11 items-center rounded-full bg-input transition-colors data-[state=checked]:bg-primary cursor-pointer;
+}
+#optiontics-vendor-dashboard .opt-switch-thumb {
+	@apply pointer-events-none absolute left-1 top-1 h-4 w-4 rounded-full bg-background shadow transition-transform duration-200 data-[state=checked]:translate-x-5;
+}
+#optiontics-vendor-dashboard .opt-radio-item {
+	@apply border-input text-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 aspect-square size-4 shrink-0 rounded-full border shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 p-0 bg-transparent hover:bg-transparent;
+}
+#optiontics-vendor-dashboard .opt-radio-item-indicator {
+	@apply relative flex items-center justify-center;
+}
+#optiontics-vendor-dashboard .opt-radio-item-indicator-circle {
+	@apply fill-primary absolute top-1/2! left-1/2! size-2 -translate-x-1/2! -translate-y-1/2! transform;
+}
+
+#optiontics-vendor-dashboard
+	.opt-editor-canvas-right-side
+	.opt-option-delete-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] text-neutral-500 hover:bg-neutral-200 size-8 sm:size-9 h-8 w-8 opacity-0 group-hover:opacity-100 group-hover:bg-neutral-200 transition-opacity duration-300 p-0 focus:bg-neutral-200 border-none;
+}
+#optiontics-vendor-dashboard .opt-option-row .opt-option-delete-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] text-neutral-500 hover:bg-neutral-200 size-8 sm:size-9  h-8 w-8 p-0 bg-transparent shadow-none border-none;
+}
+#optiontics-vendor-dashboard .opt-option-delete-btn .optiontics-icon svg {
+	@apply text-black;
+}
+/* for legacy UI */
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	#optiontics-vendor-dashboard
+	.opt-editor-canvas-right-side
+	.opt-option-delete-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] text-neutral-500 hover:bg-neutral-200 size-8 sm:size-9 h-8 w-8 opacity-0 group-hover:opacity-100 group-hover:bg-neutral-200 transition-opacity duration-300;
+}
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	#optiontics-vendor-dashboard
+	.opt-option-row
+	.opt-option-delete-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] text-neutral-500 hover:bg-neutral-200 size-8 sm:size-9 h-8 w-8;
+}
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	#optiontics-vendor-dashboard
+	.opt-options-list-container {
+	@apply mt-10;
+}
+#optiontics-vendor-dashboard .opt-input-grp-addon-radio {
+	@apply p-0 border-gray-300;
+}
+#optiontics-vendor-dashboard .opt-input-grp-addon-radio-inner {
+	@apply w-full h-full rounded-full bg-white scale-50;
+}
+#optiontics-vendor-dashboard .opt-add-new-option-btn {
+	@apply inline-flex items-center justify-center whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] bg-primary/10 text-primary hover:text-primary-300 h-8 text-sm! font-normal! gap-1.5 px-3 has-[>svg]:px-2.5 m-3 border-none;
+}
+
+/* ================== Astra theme multivendor css support ==================*/
+
+#optiontics-vendor-dashboard .opt-checkbox {
+	@apply dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-white dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer p-0 bg-white border-[#e0e0e0];
+}
+#optiontics-vendor-dashboard .opt-switch {
+	@apply relative inline-flex h-6 w-11 items-center rounded-full bg-input transition-colors data-[state=checked]:bg-primary cursor-pointer border-none p-0;
+}
+#optiontics-vendor-dashboard .opt-options-list-edit-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] border border-gray-300 bg-white text-neutral-400 hover:bg-gray-50 size-8 sm:size-9 p-0;
+}
+#optiontics-vendor-dashboard .opt-options-list-delete-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] border border-gray-300 bg-white text-neutral-400 hover:bg-gray-50 size-8 sm:size-9 p-0;
+}
+#optiontics-vendor-dashboard .opt-table,
+th {
+	@apply mb-0  border-b border-gray-200;
+}
+/* for legacy UI */
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	#optiontics-vendor-dashboard
+	.opt-table,
+th {
+	@apply border-none;
+}
+#optiontics-vendor-dashboard [data-slot="table-row"] {
+	@apply border-b transition-colors border-gray-100 border-x-0 border-t-0;
+	background-color: var(--table-row-bg);
+}
+
+#optiontics-vendor-dashboard [data-slot="table-row"]:hover,
+#optiontics-vendor-dashboard [data-slot="table-row"][data-state="selected"] {
+	background-color: var(--table-row-bg);
+}
+#optiontics-vendor-dashboard td,
+th {
+	@apply border-l-0 border-r-0 border-b-0;
+}
+
+#optiontics-vendor-dashboard .opt-input {
+	@apply rounded-sm  border-input focus:outline-none focus:ring-0 focus:ring-offset-0 focus:shadow-none focus:border-input! focus:border-solid! py-2 px-3 h-10;
+}
+/* for legacy UI */
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	#optiontics-vendor-dashboard
+	[data-slot="input-group"]
+	.opt-input {
+	@apply border-none bg-transparent;
+}
+
+#optiontics-vendor-dashboard .opt-option-price-input .opt-input {
+	@apply file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 min-w-0 rounded-md border px-3 py-1 shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive text-sm w-full border-none! bg-transparent;
+}
+#optiontics-vendor-dashboard .opt-builder-header-plus-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] text-neutral-500 hover:bg-neutral-200 size-8 sm:size-9 bg-transparent p-0 border-none;
+}
+#optiontics-vendor-dashboard .opt-builder-header-edit-btn {
+	@apply p-0 bg-transparent hover:bg-transparent border-none;
+}
+
+.opt-select-box-options {
+	@apply max-h-56 overflow-auto pr-1 flex flex-col gap-2;
+}
+.opt-select-box-options label {
+	@apply flex items-center gap-1.5 px-1 py-1 cursor-pointer;
+}
+.opt-select-box-options label .opt-checkbox {
+	@apply hover:bg-white focus:bg-white border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.opt-block-item .opt-block-item-icon {
+	@apply text-3xl font-bold text-gray-600;
+}
+.opt-block-item h4 {
+	@apply text-base;
+}
+
+#optiontics-vendor-dashboard .opt-builder-exit-btn {
+	@apply items-center justify-center whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] text-neutral-500 hover:bg-neutral-200 h-8 text-sm! font-normal! px-3 has-[>svg]:px-2.5 flex gap-2 text-base font-medium bg-transparent border-none;
+}
+#optiontics-vendor-dashboard .opt-builder-save-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] bg-primary text-neutral-100 hover:bg-primary-400 active:bg-primary-400 disabled:bg-primary-200 h-10 px-4 text-sm has-[>svg]:px-3 sm:h-11 sm:px-6 sm:text-base rounded-r-none border-none;
+}
+#optiontics-vendor-dashboard .opt-builder-save-dropdown-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] bg-primary text-neutral-100 hover:bg-primary-400 active:bg-primary-400 disabled:bg-primary-200 h-10 px-4 text-sm has-[>svg]:px-3 sm:h-11 sm:px-6 sm:text-base pl-2 border-l! border-l-[#103D99]! rounded-l-none p-0 border-none;
+}
+
+#optiontics-vendor-dashboard .opt-select-trigger {
+	@apply hover:bg-transparent focus:bg-transparent;
+}
+#optiontics-vendor-dashboard .opt-select-trigger [data-slot="select-value"] {
+	@apply text-gray-700;
+}
+#optiontics-vendor-dashboard .opt-input-addon-checkbox {
+	@apply p-0 hover:bg-transparent;
+}
+/* for legacy UI */
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	#optiontics-vendor-dashboard
+	.opt-input-addon-checkbox {
+	@apply border! bg-transparent hover:border-primary border-input!;
+}
+/* #optiontics-vendor-dashboard .opt-input-addon-checkbox svg {
+	@apply w-full h-full text-white;
+} */
+#optiontics-vendor-dashboard .opt-option-image-upload-btn {
+	@apply w-10 h-10 rounded-full border-0! bg-[#F7F8FA]! hover:bg-[#F7F8FA]! p-0;
+}
+/* legacy UI */
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	#optiontics-vendor-dashboard
+	.opt-option-image-upload-btn
+	svg {
+	@apply mx-auto;
+}
+#optiontics-vendor-dashboard .opt-options-header {
+	@apply mt-2;
+}
+#optiontics-vendor-dashboard .opt-option-image {
+	@apply rounded-full size-10 object-cover;
+}
+#optiontics-vendor-dashboard .opt-price-type-option-header {
+	@apply py-2.5;
+}
+#optiontics-vendor-dashboard .opt-price-type-option-header p {
+	@apply mb-0;
+}
+#optiontics-vendor-dashboard .opt-save-draft-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] bg-primary/10 text-primary hover:text-primary-300 h-10 px-4 text-sm has-[>svg]:px-3 sm:h-11 sm:px-6 sm:text-base border-none;
+}
+.opt-alert-dialog-footer {
+	@apply flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2;
+}
+.opt-alert-dialog-footer > :nth-child(1) {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] border border-gray-300 bg-white text-neutral-400 hover:bg-gray-50 h-10 px-4 text-sm has-[>svg]:px-3 sm:h-11 sm:px-6 sm:text-base;
+}
+.opt-alert-dialog-footer > :nth-child(2) {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] text-neutral-100 active:bg-primary-400 disabled:bg-primary-200 h-10 px-4 text-sm has-[>svg]:px-3 sm:h-11 sm:px-6 sm:text-base bg-danger hover:bg-danger border-none;
+}
+button.absolute.right-4.top-4.cursor-pointer,
+button.absolute.top-4.right-4 {
+	@apply absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-visual-100 cursor-pointer border-none p-0 hover:bg-white hover:text-gray-700;
+}
+button.absolute.right-4.top-4.cursor-pointer,
+button.absolute.top-4.right-4 svg {
+	@apply text-black hover:text-black bg-transparent hover:bg-transparent;
+}
+#optiontics-vendor-dashboard .opt-add-blocks-btn {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] bg-primary text-neutral-100 hover:bg-primary-400 active:bg-primary-400 disabled:bg-primary-200 size-8 sm:size-9 p-0 border-none;
+}
+#optiontics-vendor-dashboard .opt-editor-canvas-right-side {
+	@apply w-[90%] md:w-[90%];
+}
+#optiontics-vendor-dashboard
+	.opt-option-row
+	[data-slot="input-group"]
+	.opt-input {
+	@apply focus:border-none! focus:ring-0 focus:ring-offset-0 focus:shadow-none focus:border-input!;
+}
+
+#optiontics-vendor-dashboard .opt-option-price-input .opt-input {
+	@apply focus:border-none! focus:ring-0 focus:ring-offset-0 focus:shadow-none focus:border-input!;
+}
+/* #optiontics-vendor-dashboard .opt-builder-control-sidebar {
+	@apply md:w-[550px];
+} */
+
+.opt-switch-to-draft-btn {
+	@apply text-primary hover:text-primary-400;
+}
+.opt-delete-option-btn {
+	@apply focus:bg-accent focus:text-accent-foreground data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 dark:data-[variant=destructive]:focus:bg-destructive/20 data-[variant=destructive]:focus:text-destructive data-[variant=destructive]:*:[svg]:!text-destructive [&_svg:not([class*='text-'])]:text-muted-foreground relative rounded-sm py-1.5 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[inset]:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 px-2.5 flex items-center gap-2 cursor-pointer text-red-600 hover:text-red-700 hover:bg-red-50 p-0 border-none;
+}
+/* Dokan: page-container must not be 100vh — it's embedded inside a page with nav bars above */
+#optiontics-vendor-dashboard .page-container {
+	height: auto !important;
+}
+
+/* for new dokan UI layout - responsive flex/block */
+#dokan-dashboard-fullwidth-wrapper
+	#optiontics-vendor-dashboard
+	.opt-builder-layout {
+	@apply block overflow-auto;
+	min-height: 70vh;
+}
+
+/* Custom breakpoint: flex at 1180px and above for new UI */
+@media (min-width: 1180px) {
+	#dokan-dashboard-fullwidth-wrapper
+		#optiontics-vendor-dashboard
+		.opt-builder-layout {
+		@apply flex overflow-hidden;
+		min-height: 70vh;
+	}
+}
+
+/* Sidebar: full width when stacked (below 1180px), fixed width when side-by-side */
+#optiontics-vendor-dashboard .opt-builder-control-sidebar {
+	min-height: 300px;
+	height: auto;
+}
+@media (min-width: 1180px) {
+	#optiontics-vendor-dashboard .opt-builder-control-sidebar {
+		width: 495px;
+		flex-shrink: 0;
+	}
+}
+@media (max-width: 1179px) {
+	#optiontics-vendor-dashboard .opt-builder-control-sidebar {
+		width: 100% !important;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+/* Mobile responsive grid for option rows (below 680px) */
+@media (max-width: 679px) {
+	#optiontics-vendor-dashboard .opt-option-row {
+		grid-template-columns: 40px 1fr 60px !important;
+		gap: 8px;
+		grid-template-areas:
+			"image title actions"
+			"price price price"
+			"priceInput priceInput priceInput";
+	}
+
+	#optiontics-vendor-dashboard .opt-option-row > div:nth-child(1) {
+		grid-area: image;
+	}
+	#optiontics-vendor-dashboard .opt-option-row > div:nth-child(2) {
+		grid-area: title;
+	}
+	#optiontics-vendor-dashboard .opt-option-row > div:nth-child(3) {
+		grid-area: price;
+		width: 100%;
+	}
+	#optiontics-vendor-dashboard .opt-option-row > div:nth-child(4) {
+		grid-area: priceInput;
+		width: 100%;
+	}
+	#optiontics-vendor-dashboard .opt-option-row > div:nth-child(5) {
+		grid-area: actions;
+		justify-self: end;
+	}
+}
+
+[role="alertdialog"] {
+	@apply bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg border-neutral-200;
+}
+
+[role="alertdialog"]
+	[data-slot="alert-dialog-header"]
+	[data-slot="alert-dialog-title"] {
+	@apply text-lg!;
+}
+[role="dialog"] h2 {
+	@apply text-lg!;
+}
+
+/* for dokan legacy UI - always block layout (even on large screens) */
+/* Target only legacy UI: dokan-dashboard-wrap NOT inside dokan-dashboard-fullwidth-wrapper */
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	.dokan-dashboard-wrap
+	#optiontics-vendor-dashboard
+	.opt-builder-layout {
+	@apply block overflow-auto!;
+	min-height: 70vh;
+}
+
+/* Center the control sidebar in legacy UI since it's always block layout */
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	.dokan-dashboard-wrap
+	#optiontics-vendor-dashboard
+	.opt-builder-control-sidebar {
+	@apply mx-auto! w-[90%];
+}
+/* ================== Astra theme multivendor css support ==================*/
+
+/* ================== Elementor theme multivendor css support ==================*/
+#optiontics-vendor-dashboard .opt-table .opt-table-head {
+	@apply border-b border-b-neutral-400 border-l-0 border-r-0 border-t-0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.opt-form-input-tooltip-trigger {
+	@apply inline-flex ml-2 p-0 bg-transparent border-none text-muted-foreground cursor-pointer hover:bg-transparent text-gray-500;
+}
+.opt-tooltip-arrow {
+	@apply bg-[var(--color-tooltip-bg)] fill-[var(--color-tooltip-bg)] z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px];
+}
+.opt-select-trigger {
+	@apply border-input data-placeholder:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-11 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 w-full min-w-32 hover:bg-transparent focus:bg-transparent focus:text-gray-700 text-gray-700 hover:text-gray-700;
+}
+.opt-dialog-footer {
+	@apply flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2;
+}
+/* dialog footer btn 1st-left-secondary and 2nd-right-primary child */
+.opt-dialog-footer > :nth-child(1) {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] border border-gray-300 bg-white text-neutral-400 hover:bg-gray-50 h-10 px-4 text-sm has-[>svg]:px-3 sm:h-11 sm:px-6 sm:text-base;
+}
+.opt-dialog-footer > :nth-child(2) {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer disabled:cursor-not-allowed rounded-[6px] bg-primary text-neutral-100 hover:bg-primary-400 active:bg-primary-400 disabled:bg-primary-200 h-10 px-4 text-sm has-[>svg]:px-3 sm:h-11 sm:px-6 sm:text-base border-none;
+}
+.opt-select-box-popover-trigger {
+	@apply inline-flex h-11 w-full max-w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 overflow-hidden  hover:bg-transparent focus:bg-transparent text-gray-700 hover:text-gray-700;
+}
+
+.opt-select-box-options .opt-checkbox {
+	@apply border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 p-0 hover:bg-transparent cursor-pointer bg-white border-[#e0e0e0];
+}
+
+.opt-input-addon-checkbox.active {
+	@apply bg-primary! border-primary!;
+}
+#optiontics-vendor-dashboard .opt-input-grp-addon-radio {
+	@apply p-0 bg-white border-gray-300 rounded-full;
+}
+/* for legacy UI */
+body:not(:has(#dokan-dashboard-fullwidth-wrapper))
+	#optiontics-vendor-dashboard
+	.opt-input-grp-addon-radio {
+	@apply border border-input! size-5;
+}
+#optiontics-vendor-dashboard .opt-input-grp-addon-radio.active {
+	@apply p-0 bg-primary! border-primary!;
+}
+
+/* ================== Elementor theme multivendor css support ==================*/
+
+/* ----------- Optiontics multivendor css support -----------------*/
+.addon-form {
+	padding: 30px;
+	border-radius: 12px;
+	max-width: 600px;
+	width: 100%;
+}
+
+.addon-form h2 {
+	margin-bottom: 20px;
+	text-align: center;
+	color: #333;
+}
+
+.addon-group {
+	margin-bottom: 25px;
+}
+
+.addon-group h4 {
+	color: #364153;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	margin: 0px 0px 4px 0px;
+}
+
+.addon-options {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	background: #f8f9fb;
+	padding: 10px 15px;
+	border-radius: 8px;
+	margin-bottom: 8px;
+	padding: 6px;
+	border-radius: 6px;
+	border: 1px solid oklch(92.8% 0.006 264.531);
+	background: #fff;
+}
+
+/* Column layout for checkbox and radio options */
+.addon-options.addon-options-columns-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 8px;
+}
+
+.addon-options.addon-options-columns-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 8px;
+}
+
+.addon-option label img.optiontics-block-image {
+	width: 32px !important;
+	height: 32px !important;
+	object-fit: cover !important;
+	border-radius: 5px !important;
+	margin-right: 4px !important;
+}
+
+.addon-option {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 5px;
+}
+
+.addon-option label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: #1e2939;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	margin-bottom: 0px;
+}
+
+.optiontics-block-image {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+.optiontics-block-description {
+	font-size: 12px;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.addon-option input[type="number"] {
+	width: 60px;
+	padding: 4px 6px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.addon-option span.price {
+	color: #1e2939;
+	font-size: 14px;
+}
+
+.form-control {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #bfbfbf;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.total {
+	text-align: right;
+	font-size: 18px;
+	font-weight: bold;
+	color: #111;
+	margin-top: 20px;
+}
+
+input:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.addon-switch input[type="checkbox"] {
+	appearance: none;
+	width: 40px;
+	height: 24px;
+	background: #ccc;
+	border-radius: 20px;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	transition: background 0.3s;
+}
+
+.addon-switch input[type="checkbox"]::before {
+	content: "";
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	top: 2px;
+	left: 2px;
+	background: #fff;
+	border-radius: 50%;
+	transition: transform 0.3s;
+}
+
+.addon-switch input[type="checkbox"]:checked {
+	background: #175ce6;
+}
+
+.addon-switch input[type="checkbox"]:checked::before {
+	transform: translateX(18px);
+	left: 0px;
+}
+
+.switch-label {
+	vertical-align: middle;
+}
+
+/* Checkbox styling - Custom square checkboxes */
+.addon-option input[type="checkbox"]:not(.addon-switch input[type="checkbox"]),
+.adntc-checkbox-option input[type="checkbox"],
+input[type="checkbox"].adntc-checkbox {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #d1d5db;
+	border-radius: 4px;
+	background: #ffffff;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.2s ease;
+	flex-shrink: 0;
+	margin: 0;
+}
+
+/* Checkbox unchecked hover state - Blue border */
+.addon-option
+	input[type="checkbox"]:not(.addon-switch input[type="checkbox"]):hover:not(
+		:checked
+	),
+.adntc-checkbox-option input[type="checkbox"]:hover:not(:checked),
+input[type="checkbox"].adntc-checkbox:hover:not(:checked) {
+	border-color: #175ce6;
+	background: #ffffff;
+}
+
+/* Checkbox unchecked focus state - Blue border */
+.addon-option
+	input[type="checkbox"]:not(.addon-switch input[type="checkbox"]):focus:not(
+		:checked
+	),
+.adntc-checkbox-option input[type="checkbox"]:focus:not(:checked),
+input[type="checkbox"].adntc-checkbox:focus:not(:checked) {
+	border-color: #175ce6;
+	background: #ffffff;
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(23, 92, 230, 0.1);
+}
+
+/* Checkbox checked state - Blue background with white checkmark */
+.addon-option
+	input[type="checkbox"]:not(.addon-switch input[type="checkbox"]):checked,
+.adntc-checkbox-option input[type="checkbox"]:checked,
+input[type="checkbox"].adntc-checkbox:checked {
+	background: #175ce6;
+	border-color: #175ce6;
+}
+
+/* Checkmark icon for checked checkbox - CSS-based design */
+.addon-option
+	input[type="checkbox"]:not(
+		.addon-switch input[type="checkbox"]
+	):checked::after,
+.adntc-checkbox-option input[type="checkbox"]:checked::after,
+input[type="checkbox"].adntc-checkbox:checked::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -60%) rotate(45deg);
+	width: 4px;
+	height: 10px;
+	border: solid #ffffff;
+	border-width: 0 2px 2px 0;
+}
+
+/* Checkbox checked hover state */
+.addon-option
+	input[type="checkbox"]:not(
+		.addon-switch input[type="checkbox"]
+	):checked:hover,
+.adntc-checkbox-option input[type="checkbox"]:checked:hover,
+input[type="checkbox"].adntc-checkbox:checked:hover {
+	background: #1247b8;
+	border-color: #1247b8;
+}
+
+/* Checkbox checked focus state */
+.addon-option
+	input[type="checkbox"]:not(
+		.addon-switch input[type="checkbox"]
+	):checked:focus,
+.adntc-checkbox-option input[type="checkbox"]:checked:focus,
+input[type="checkbox"].adntc-checkbox:checked:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(23, 92, 230, 0.2);
+}
+
+/* Error state for checkboxes */
+.optiontics-error
+	.addon-option
+	input[type="checkbox"]:not(.addon-switch input[type="checkbox"]),
+.optiontics-error .adntc-checkbox-option input[type="checkbox"],
+.optiontics-error input[type="checkbox"].adntc-checkbox {
+	border-color: #dc3545;
+	outline: 2px solid #dc3545;
+	outline-offset: 2px;
+}
+
+/* Radio button styling - Custom circular radio buttons */
+.addon-option input[type="radio"],
+input[type="radio"] {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #d1d5db;
+	border-radius: 50%;
+	background: #ffffff;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.2s ease;
+	flex-shrink: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* Radio button unchecked hover state - Blue border */
+.addon-option input[type="radio"]:hover:not(:checked),
+input[type="radio"]:hover:not(:checked) {
+	border-color: #175ce6;
+	background: #ffffff;
+}
+
+/* Radio button unchecked focus state - Blue border with focus ring */
+.addon-option input[type="radio"]:focus:not(:checked),
+input[type="radio"]:focus:not(:checked) {
+	border-color: #175ce6;
+	background: #ffffff;
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(23, 92, 230, 0.1);
+}
+
+/* Radio button checked state - Blue circle with white center dot */
+.addon-option input[type="radio"]:checked,
+input[type="radio"]:checked {
+	background: #175ce6;
+	border-color: #175ce6;
+}
+
+/* White center dot for checked radio button */
+.addon-option input[type="radio"]:checked::after,
+input[type="radio"]:checked::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #ffffff;
+}
+
+/* Radio button checked hover state - Darker blue */
+.addon-option input[type="radio"]:checked:hover,
+input[type="radio"]:checked:hover {
+	background: #1247b8;
+	border-color: #1247b8;
+}
+
+/* Radio button checked focus state */
+.addon-option input[type="radio"]:checked:focus,
+input[type="radio"]:checked:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(23, 92, 230, 0.2);
+}
+
+/* Error state for radio buttons */
+.optiontics-error .addon-option input[type="radio"],
+.optiontics-error input[type="radio"] {
+	border-color: #dc3545;
+	outline: 2px solid #dc3545;
+	outline-offset: 2px;
+}
+
+/* Required field error styling */
+.optiontics-error input:not([type="checkbox"]):not([type="radio"]),
+.optiontics-error textarea {
+	border-color: #dc3545 !important;
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.addon-group.optiontics-error {
+	border: 1px solid #dc3545;
+	border-radius: 4px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+/* Required indicator */
+.optiontics-required-indicator {
+	color: #dc3545;
+	font-weight: bold;
+	margin-left: 4px;
+}
+
+/* Field error message */
+.optiontics-field-error {
+	color: #dc3545;
+	font-size: 14px;
+	margin-top: 5px;
+	display: none;
+}
+
+/* Toast notification */
+.optiontics-toast {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background: #dc3545;
+	color: #fff;
+	padding: 15px 20px;
+	border-radius: 6px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	z-index: 10000;
+	opacity: 0;
+	transform: translateX(400px);
+	transition: all 0.3s ease;
+	max-width: 400px;
+	font-size: 14px;
+}
+
+.optiontics-toast.optiontics-toast-show {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.optiontics-toast.optiontics-toast-success {
+	background: #28a745;
+}
+
+.wpc-popup-wrap-inner .woocommerce-product-gallery__wrapper,
+.wpc-menu-of-the-day .modal-content .woocommerce-product-gallery__wrapper {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 10px !important;
+}
+
+[role="alertdialog"] {
+	@apply relative grid w-full max-w-lg gap-4 p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 rounded-lg sm:max-w-[620px] bg-white;
+}
+.opt-dialog-overlay {
+	@apply fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0;
+}
+[role="alertdialog"] {
+	@apply relative grid w-full max-w-lg gap-4 p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 rounded-lg sm:max-w-[620px] bg-white;
+}
+.opt-dialog-content {
+	@apply bg-white;
+}
+
+.opt-toolbox {
+	@apply text-white!;
+}
+
+/* =============================================================================
+   PRODUCT PAGE — opt-* field styles
+   ALL product-page rules are prefixed with .opt-addon-form so they gain an
+   extra class in specificity (0,2,x) and cannot be overridden by common theme
+   patterns such as `input[type="text"]` (0,1,1) or `.theme-wrap input` (0,1,1).
+   Element tags are included on input/select/textarea selectors for an extra
+   specificity point where needed.
+   Written as flat CSS for maximum browser compatibility (no CSS nesting).
+   ============================================================================= */
+
+.opt-addon-form {
+	margin: 1.5em 0;
+}
+
+.opt-addon-form input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="hidden"]),
+.opt-addon-form select,
+.opt-addon-form textarea {
+	box-shadow: none;
+	background-image: none;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	margin: 0;
+}
+
+.opt-addon-form fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+	min-width: 0;
+}
+
+.opt-addon-form legend {
+	padding: 0;
+	float: none;
+	width: auto;
+	border: none;
+}
+
+.opt-addon-form label {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+.opt-addon-form .opt-field,
+.opt-addon-form .opt-group,
+.opt-addon-form .opt-fieldset {
+	margin-bottom: 1.25em;
+	border: none;
+	padding: 0;
+	min-width: 0;
+}
+
+.opt-addon-form .opt-field__label {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.35em;
+	font-weight: 700;
+	font-size: 1em;
+	margin-bottom: 0.6em;
+	color: #111;
+}
+
+.opt-addon-form .opt-field__required {
+	color: #e53e3e;
+}
+
+.opt-addon-form .opt-field__description,
+.opt-addon-form .opt-field__desc {
+	font-size: 0.85em;
+	color: #666;
+	margin: 0 0 0.5em;
+}
+
+.opt-addon-form .opt-field__price {
+	font-size: 0.85em;
+	font-weight: 400;
+	color: #888;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3em;
+}
+
+.opt-addon-form .opt-field__price del {
+	color: #aaa !important;
+	text-decoration: line-through !important;
+	font-weight: 400;
+}
+
+.opt-addon-form .opt-field__price ins {
+	text-decoration: none !important;
+	color: #111;
+	font-weight: 600;
+}
+
+.opt-addon-form .opt-field__price .woocommerce-Price-amount {
+	text-decoration: none;
+}
+
+.opt-addon-form .opt-field__heading-text {
+	font-size: 1.1em;
+	font-weight: 700;
+	margin: 0.75em 0 0.25em;
+}
+
+.opt-addon-form .opt-fieldset--checkbox,
+.opt-addon-form .opt-fieldset--radio {
+	background: #fff;
+	border: 1.5px solid #e5e7eb !important;
+	border-radius: 14px !important;
+	padding: 6px 4px !important;
+}
+
+.opt-addon-form .opt-choices {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.opt-addon-form .opt-choices--cols-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.opt-addon-form .opt-choices--cols-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.opt-addon-form .opt-choice {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 14px;
+	cursor: pointer;
+	transition: background 0.12s;
+}
+
+.opt-addon-form .opt-choice:hover {
+	background: #f8f9fa;
+}
+
+.opt-addon-form .opt-fieldset--checkbox .opt-choice + .opt-choice,
+.opt-addon-form .opt-fieldset--radio .opt-choice + .opt-choice {
+	border-top: 1px solid #f0f0f0;
+}
+
+.opt-addon-form .opt-choice--checkbox input[type="checkbox"].opt-choice__input:not(.opt-choice__input--hidden) {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	min-width: 20px;
+	border: 2px solid #d1d5db !important;
+	border-radius: 5px;
+	background: #fff !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	cursor: pointer;
+	position: relative;
+	transition: background 0.15s, border-color 0.15s;
+	margin: 0;
+	flex-shrink: 0;
+	padding: 0;
+}
+
+.opt-addon-form .opt-choice--checkbox input[type="checkbox"].opt-choice__input:not(.opt-choice__input--hidden):checked {
+	background: #2563eb !important;
+	border-color: #2563eb !important;
+}
+
+.opt-addon-form .opt-choice--checkbox input[type="checkbox"].opt-choice__input:not(.opt-choice__input--hidden):checked::after {
+	content: '';
+	position: absolute;
+	left: 4px;
+	top: 1px;
+	width: 7px;
+	height: 11px;
+	border: 2px solid #fff;
+	border-top: none;
+	border-left: none;
+	transform: rotate(45deg);
+}
+
+.opt-addon-form .opt-choice--radio input[type="radio"].opt-choice__input:not(.opt-choice__input--hidden) {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	min-width: 20px;
+	border: 2px solid #d1d5db !important;
+	border-radius: 50%;
+	background: #fff !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	cursor: pointer;
+	position: relative;
+	transition: background 0.15s, border-color 0.15s;
+	margin: 0;
+	flex-shrink: 0;
+	padding: 0;
+}
+
+.opt-addon-form .opt-choice--radio input[type="radio"].opt-choice__input:not(.opt-choice__input--hidden):checked {
+	background: #2563eb !important;
+	border-color: #2563eb !important;
+}
+
+.opt-addon-form .opt-choice--radio input[type="radio"].opt-choice__input:not(.opt-choice__input--hidden):checked::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 7px;
+	height: 7px;
+	background: #fff;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.opt-addon-form .opt-field__image,
+.opt-addon-form .opt-choice__image {
+	width: 48px;
+	height: 48px;
+	object-fit: cover;
+	border-radius: 8px;
+	flex-shrink: 0;
+}
+
+.opt-addon-form .opt-choice__label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+	flex: 1;
+	min-width: 0;
+}
+
+.opt-addon-form .opt-choice__text {
+	flex: 1;
+	font-size: 0.95em;
+	color: #111;
+	line-height: 1.4;
+}
+
+.opt-addon-form .opt-choice .opt-field__price {
+	margin-left: auto;
+	flex-shrink: 0;
+	font-size: 0.9em;
+	white-space: nowrap;
+}
+
+/* ──────────────────────────────────────────────────────────────
+ * Button Group — pill-style option picker.
+ * ────────────────────────────────────────────────────────────── */
+.opt-addon-form .opt-fieldset--button-group {
+	background: transparent;
+	border: 0 !important;
+	padding: 0 !important;
+}
+
+.opt-addon-form .opt-choices--button-group {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.opt-addon-form .opt-choice--button-group {
+	display: inline-flex;
+	align-items: center;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+	margin: 0;
+}
+
+.opt-addon-form .opt-choice--button-group:hover {
+	background: transparent;
+}
+
+.opt-addon-form .opt-choice--button-group .opt-choice__input--hidden {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.opt-addon-form .opt-choice--button-group .opt-choice__button {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	min-height: 40px;
+	padding: 8px 18px;
+	border: 1.5px solid #d1d5db;
+	border-radius: 8px;
+	background: #fff;
+	color: #111827;
+	font-size: 0.95em;
+	font-weight: 500;
+	line-height: 1.2;
+	transition: background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
+	white-space: nowrap;
+}
+
+.opt-addon-form .opt-choice--button-group:hover .opt-choice__button {
+	border-color: #9ca3af;
+}
+
+.opt-addon-form
+	.opt-choice--button-group
+	.opt-choice__input--hidden:checked
+	+ .opt-choice__button {
+	background: #111827;
+	border-color: #111827;
+	color: #ffffff;
+	box-shadow: 0 1px 2px rgba(17, 24, 39, 0.15);
+}
+
+.opt-addon-form
+	.opt-choice--button-group
+	.opt-choice__input--hidden:focus-visible
+	+ .opt-choice__button {
+	outline: 2px solid #2563eb;
+	outline-offset: 2px;
+}
+
+.opt-addon-form .opt-choice--button-group .opt-choice__text {
+	flex: 0 0 auto;
+	color: inherit;
+}
+
+.opt-addon-form
+	.opt-choice--button-group
+	.opt-choice__input--hidden:checked
+	+ .opt-choice__button
+	.opt-field__price {
+	color: inherit;
+	opacity: 0.85;
+}
+
+.opt-addon-form .opt-choice--button-group .opt-field__price {
+	margin-left: 0;
+	font-size: 0.85em;
+	opacity: 0.75;
+}
+
+.opt-addon-form .opt-group--select select.opt-select {
+	width: 100%;
+	padding: 0.6em 2em 0.6em 0.85em;
+	border: 1.5px solid #e5e7eb !important;
+	border-radius: 10px;
+	background-color: #fff !important;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+	background-repeat: no-repeat !important;
+	background-position: right 0.65em center !important;
+	background-size: 1em !important;
+	font-size: 0.95em;
+	appearance: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+	transition: border-color 0.15s;
+	box-shadow: none !important;
+	color: #111;
+}
+
+.opt-addon-form .opt-group--select select.opt-select:focus {
+	outline: none;
+	border-color: #2563eb !important;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+.opt-addon-form input.opt-text-input,
+.opt-addon-form textarea.opt-textarea,
+.opt-addon-form input.opt-tel-input,
+.opt-addon-form input.opt-number-input {
+	width: 100%;
+	padding: 0.6em 0.85em;
+	border: 1.5px solid #e5e7eb !important;
+	border-radius: 10px;
+	font-size: 0.95em;
+	box-sizing: border-box;
+	background: #fff !important;
+	background-image: none !important;
+	color: #111;
+	transition: border-color 0.15s;
+	outline: none;
+	box-shadow: none !important;
+}
+
+.opt-addon-form input.opt-text-input:focus,
+.opt-addon-form textarea.opt-textarea:focus,
+.opt-addon-form input.opt-tel-input:focus,
+.opt-addon-form input.opt-number-input:focus {
+	border-color: #2563eb !important;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+	outline: none !important;
+}
+
+.opt-addon-form input.opt-text-input::placeholder,
+.opt-addon-form textarea.opt-textarea::placeholder,
+.opt-addon-form input.opt-tel-input::placeholder,
+.opt-addon-form input.opt-number-input::placeholder {
+	color: #aaa;
+}
+
+.opt-addon-form textarea.opt-textarea {
+	min-height: 90px;
+	resize: vertical;
+}
+
+.opt-addon-form input.opt-qty-input {
+	width: 56px;
+	padding: 0.4em 0.5em;
+	border: 1.5px solid #e5e7eb !important;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 0.9em;
+	background: #fff !important;
+	background-image: none !important;
+	color: #111;
+	outline: none;
+	transition: border-color 0.15s;
+	box-shadow: none !important;
+}
+
+.opt-addon-form input.opt-qty-input:focus {
+	border-color: #2563eb !important;
+	box-shadow: none !important;
+}
+
+.opt-addon-form .opt-group--toggle {
+	background: #fff;
+	border: 1.5px solid #e5e7eb !important;
+	border-radius: 14px;
+	padding: 12px 16px;
+}
+
+.opt-addon-form .opt-toggle-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.opt-addon-form .opt-toggle-label {
+	cursor: pointer;
+	font-weight: normal;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex: 1;
+	min-width: 0;
+	font-size: 0.95em;
+	color: #111;
+}
+
+.opt-addon-form .opt-toggle-label__text {
+	flex: 1;
+}
+
+.opt-addon-form .opt-toggle-track {
+	position: relative;
+	display: inline-flex;
+	width: 52px;
+	height: 28px;
+	border-radius: 14px;
+	background-color: #d1d5db;
+	transition: background-color 0.2s;
+	flex-shrink: 0;
+}
+
+.opt-addon-form input.opt-toggle-input {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	cursor: pointer;
+	z-index: 1;
+	border: none !important;
+	box-shadow: none !important;
+	background: none !important;
+}
+
+.opt-addon-form .opt-toggle-thumb {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+	transition: transform 0.2s;
+	pointer-events: none;
+}
+
+.opt-addon-form input.opt-toggle-input:checked ~ .opt-toggle-thumb,
+.opt-addon-form input.opt-toggle-input:checked + .opt-toggle-thumb {
+	transform: translateX(24px);
+}
+
+.opt-addon-form .opt-toggle-track:has(input.opt-toggle-input:checked) {
+	background-color: #2563eb;
+}
+
+.opt-addon-form .opt-toggle-label .opt-field__price {
+	font-size: 0.88em;
+}
+
+.opt-addon-form .opt-toggle-row input.opt-qty-input {
+	margin-left: auto;
+	flex-shrink: 0;
+}
+
+.opt-addon-form .opt-price-summary {
+	margin-top: 1em;
+	padding: 0.8em 1.1em;
+	background: #f9fafb;
+	border: 1.5px solid #e5e7eb;
+	border-radius: 10px;
+	font-size: 0.95em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3em;
+}
+
+.opt-addon-form .opt-price-summary__addons,
+.opt-addon-form .opt-price-summary__total,
+.opt-addon-form .opt-price-summary .opt-price-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5em;
+}
+
+.opt-addon-form .opt-price-summary__total {
+	font-weight: 700;
+	font-size: 1.05em;
+	border-top: 1px solid #e5e7eb;
+	padding-top: 0.4em;
+	margin-top: 0.1em;
+}
+
+/* Conditional-logic visibility — hidden whenever the evaluator marks a
+   wrapper as not-matching. Uses display:none so Woo's layout collapses
+   cleanly and inputs are removed from tab order. */
+.opt-addon-form .opt-field--condition-hidden {
+	display: none !important;
+}
+
+.opt-addon-form .opt-field--error .opt-field__label,
+.opt-addon-form .opt-group--error .opt-field__label,
+.opt-addon-form .opt-fieldset--error legend.opt-field__label {
+	color: #e53e3e;
+}
+
+.opt-addon-form .opt-field--error input.opt-text-input,
+.opt-addon-form .opt-field--error textarea.opt-textarea,
+.opt-addon-form .opt-field--error input.opt-tel-input,
+.opt-addon-form .opt-field--error input.opt-number-input,
+.opt-addon-form .opt-group--error select.opt-select,
+.opt-addon-form .opt-group--error input.opt-text-input,
+.opt-addon-form .opt-group--error textarea.opt-textarea,
+.opt-addon-form .opt-group--error input.opt-tel-input,
+.opt-addon-form .opt-group--error input.opt-number-input,
+.opt-addon-form .opt-fieldset--error .opt-fieldset--checkbox,
+.opt-addon-form .opt-fieldset--error .opt-fieldset--radio {
+	border-color: #e53e3e !important;
+}
+
+.opt-addon-form .opt-field-error {
+	color: #e53e3e;
+	font-size: 0.82em;
+	margin-top: 0.3em;
+}
+
+.opt-addon-form .opt-admin-edit-link {
+	display: inline-block;
+	font-size: 0.75em;
+	color: #888;
+	text-decoration: none;
+	margin-top: 0.25em;
+}
+
+.opt-addon-form .opt-admin-edit-link:hover {
+	color: #2563eb;
+	text-decoration: underline;
+}
+
+	fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+		min-width: 0;
+	}
+
+	legend {
+		padding: 0;
+		float: none;
+		width: auto;
+		border: none;
+	}
+
+	label {
+		font-weight: normal;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* ---------- Shared field containers ---------- */
+	.opt-field,
+	.opt-group,
+	.opt-fieldset {
+		margin-bottom: 1.25em;
+		border: none;
+		padding: 0;
+		min-width: 0;
+	}
+
+	/* ---------- Field label / legend ---------- */
+	.opt-field__label {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.35em;
+		font-weight: 700;
+		font-size: 1em;
+		margin-bottom: 0.6em;
+		color: #111;
+	}
+
+	.opt-field__required {
+		color: #e53e3e;
+	}
+
+	/* ---------- Field description ---------- */
+	.opt-field__description,
+	.opt-field__desc {
+		font-size: 0.85em;
+		color: #666;
+		margin: 0 0 0.5em;
+	}
+
+	/* ---------- Inline price badge (in label) ---------- */
+	.opt-field__price {
+		font-size: 0.85em;
+		font-weight: 400;
+		color: #888;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3em;
+	}
+
+	.opt-field__price del {
+		color: #aaa !important;
+		text-decoration: line-through !important;
+		font-weight: 400;
+	}
+
+	.opt-field__price ins {
+		text-decoration: none !important;
+		color: #111;
+		font-weight: 600;
+	}
+
+	/* Plain (non-sale) price */
+	.opt-field__price .woocommerce-Price-amount {
+		text-decoration: none;
+	}
+
+	/* ---------- Heading field ---------- */
+	.opt-field__heading-text {
+		font-size: 1.1em;
+		font-weight: 700;
+		margin: 0.75em 0 0.25em;
+	}
+
+	/* =========================================================================
+	   CHECKBOX & RADIO — bordered card container
+	   ========================================================================= */
+
+	.opt-fieldset--checkbox,
+	.opt-fieldset--radio {
+		background: #fff;
+		border: 1.5px solid #e5e7eb !important;
+		border-radius: 14px !important;
+		padding: 6px 4px !important;
+	}
+
+	/* ---------- Choice list ---------- */
+	.opt-choices {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.opt-choices--cols-2 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.opt-choices--cols-3 {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/* ---------- Individual choice row ---------- */
+	.opt-choice {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 10px 14px;
+		cursor: pointer;
+		transition: background 0.12s;
+	}
+
+	.opt-choice:hover {
+		background: #f8f9fa;
+	}
+
+	/* Separator between rows */
+	.opt-fieldset--checkbox .opt-choice + .opt-choice,
+	.opt-fieldset--radio .opt-choice + .opt-choice {
+		border-top: 1px solid #f0f0f0;
+	}
+
+	/* ---------- Custom checkbox ---------- */
+	.opt-choice--checkbox input[type="checkbox"].opt-choice__input:not(.opt-choice__input--hidden) {
+		appearance: none;
+		-webkit-appearance: none;
+		width: 20px;
+		height: 20px;
+		min-width: 20px;
+		border: 2px solid #d1d5db !important;
+		border-radius: 5px;
+		background: #fff !important;
+		background-image: none !important;
+		box-shadow: none !important;
+		cursor: pointer;
+		position: relative;
+		transition: background 0.15s, border-color 0.15s;
+		margin: 0;
+		flex-shrink: 0;
+		padding: 0;
+	}
+
+	.opt-choice--checkbox input[type="checkbox"].opt-choice__input:not(.opt-choice__input--hidden):checked {
+		background: #2563eb !important;
+		border-color: #2563eb !important;
+	}
+
+	.opt-choice--checkbox input[type="checkbox"].opt-choice__input:not(.opt-choice__input--hidden):checked::after {
+		content: '';
+		position: absolute;
+		left: 4px;
+		top: 1px;
+		width: 7px;
+		height: 11px;
+		border: 2px solid #fff;
+		border-top: none;
+		border-left: none;
+		transform: rotate(45deg);
+	}
+
+	/* ---------- Custom radio ---------- */
+	.opt-choice--radio input[type="radio"].opt-choice__input:not(.opt-choice__input--hidden) {
+		appearance: none;
+		-webkit-appearance: none;
+		width: 20px;
+		height: 20px;
+		min-width: 20px;
+		border: 2px solid #d1d5db !important;
+		border-radius: 50%;
+		background: #fff !important;
+		background-image: none !important;
+		box-shadow: none !important;
+		cursor: pointer;
+		position: relative;
+		transition: background 0.15s, border-color 0.15s;
+		margin: 0;
+		flex-shrink: 0;
+		padding: 0;
+	}
+
+	.opt-choice--radio input[type="radio"].opt-choice__input:not(.opt-choice__input--hidden):checked {
+		background: #2563eb !important;
+		border-color: #2563eb !important;
+	}
+
+	.opt-choice--radio input[type="radio"].opt-choice__input:not(.opt-choice__input--hidden):checked::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 7px;
+		height: 7px;
+		background: #fff;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	/* ---------- Choice image ---------- */
+	.opt-field__image,
+	.opt-choice__image {
+		width: 48px;
+		height: 48px;
+		object-fit: cover;
+		border-radius: 8px;
+		flex-shrink: 0;
+	}
+
+	/* ---------- Choice label + text ---------- */
+	.opt-choice__label {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		flex: 1;
+		min-width: 0;
+	}
+
+	.opt-choice__text {
+		flex: 1;
+		font-size: 0.95em;
+		color: #111;
+		line-height: 1.4;
+	}
+
+	/* ---------- Choice price (right-aligned) ---------- */
+	.opt-choice .opt-field__price {
+		margin-left: auto;
+		flex-shrink: 0;
+		font-size: 0.9em;
+		white-space: nowrap;
+	}
+
+	/* =========================================================================
+	   SELECT DROPDOWN
+	   ========================================================================= */
+
+	.opt-group--select select.opt-select {
+		width: 100%;
+		padding: 0.6em 2em 0.6em 0.85em;
+		border: 1.5px solid #e5e7eb !important;
+		border-radius: 10px;
+		background-color: #fff !important;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+		background-repeat: no-repeat !important;
+		background-position: right 0.65em center !important;
+		background-size: 1em !important;
+		font-size: 0.95em;
+		appearance: none;
+		-webkit-appearance: none;
+		cursor: pointer;
+		transition: border-color 0.15s;
+		box-shadow: none !important;
+		color: #111;
+	}
+
+	.opt-group--select select.opt-select:focus {
+		outline: none;
+		border-color: #2563eb !important;
+		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+	}
+
+	/* =========================================================================
+	   TEXT INPUTS
+	   ========================================================================= */
+
+	input.opt-text-input,
+	textarea.opt-textarea,
+	input.opt-tel-input,
+	input.opt-number-input {
+		width: 100%;
+		padding: 0.6em 0.85em;
+		border: 1.5px solid #e5e7eb !important;
+		border-radius: 10px;
+		font-size: 0.95em;
+		box-sizing: border-box;
+		background: #fff !important;
+		background-image: none !important;
+		color: #111;
+		transition: border-color 0.15s;
+		outline: none;
+		box-shadow: none !important;
+	}
+
+	input.opt-text-input:focus,
+	textarea.opt-textarea:focus,
+	input.opt-tel-input:focus,
+	input.opt-number-input:focus {
+		border-color: #2563eb !important;
+		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+		outline: none !important;
+	}
+
+	input.opt-text-input::placeholder,
+	textarea.opt-textarea::placeholder,
+	input.opt-tel-input::placeholder,
+	input.opt-number-input::placeholder {
+		color: #aaa;
+	}
+
+	textarea.opt-textarea {
+		min-height: 90px;
+		resize: vertical;
+	}
+
+	/* =========================================================================
+	   QUANTITY INPUT
+	   ========================================================================= */
+
+	input.opt-qty-input {
+		width: 56px;
+		padding: 0.4em 0.5em;
+		border: 1.5px solid #e5e7eb !important;
+		border-radius: 8px;
+		text-align: center;
+		font-size: 0.9em;
+		background: #fff !important;
+		background-image: none !important;
+		color: #111;
+		outline: none;
+		transition: border-color 0.15s;
+		box-shadow: none !important;
+	}
+
+	input.opt-qty-input:focus {
+		border-color: #2563eb !important;
+		box-shadow: none !important;
+	}
+
+	/* =========================================================================
+	   TOGGLE / SWITCH
+	   ========================================================================= */
+
+	.opt-group--toggle {
+		background: #fff;
+		border: 1.5px solid #e5e7eb !important;
+		border-radius: 14px;
+		padding: 12px 16px;
+	}
+
+	.opt-toggle-row {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.opt-toggle-label {
+		cursor: pointer;
+		font-weight: normal;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		flex: 1;
+		min-width: 0;
+		font-size: 0.95em;
+		color: #111;
+	}
+
+	.opt-toggle-label__text {
+		flex: 1;
+	}
+
+	/* Track */
+	.opt-toggle-track {
+		position: relative;
+		display: inline-flex;
+		width: 52px;
+		height: 28px;
+		border-radius: 14px;
+		background-color: #d1d5db;
+		transition: background-color 0.2s;
+		flex-shrink: 0;
+	}
+
+	/* Hidden native input */
+	input.opt-toggle-input {
+		position: absolute;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		cursor: pointer;
+		z-index: 1;
+		border: none !important;
+		box-shadow: none !important;
+		background: none !important;
+	}
+
+	/* Thumb */
+	.opt-toggle-thumb {
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background-color: #fff;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+		transition: transform 0.2s;
+		pointer-events: none;
+	}
+
+	input.opt-toggle-input:checked ~ .opt-toggle-thumb,
+	input.opt-toggle-input:checked + .opt-toggle-thumb {
+		transform: translateX(24px);
+	}
+
+	.opt-toggle-track:has(input.opt-toggle-input:checked) {
+		background-color: #2563eb;
+	}
+
+	.opt-toggle-label .opt-field__price {
+		font-size: 0.88em;
+	}
+
+	.opt-toggle-row input.opt-qty-input {
+		margin-left: auto;
+		flex-shrink: 0;
+	}
+
+	/* =========================================================================
+	   PRICE SUMMARY BAR
+	   ========================================================================= */
+
+	.opt-price-summary {
+		margin-top: 1em;
+		padding: 0.8em 1.1em;
+		background: #f9fafb;
+		border: 1.5px solid #e5e7eb;
+		border-radius: 10px;
+		font-size: 0.95em;
+		display: flex;
+		flex-direction: column;
+		gap: 0.3em;
+	}
+
+	.opt-price-summary__addons,
+	.opt-price-summary__total,
+	.opt-price-summary .opt-price-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5em;
+	}
+
+	.opt-price-summary__total {
+		font-weight: 700;
+		font-size: 1.05em;
+		border-top: 1px solid #e5e7eb;
+		padding-top: 0.4em;
+		margin-top: 0.1em;
+	}
+
+	/* =========================================================================
+	   VALIDATION ERROR STATES
+	   ========================================================================= */
+
+	.opt-field--error .opt-field__label,
+	.opt-group--error .opt-field__label,
+	.opt-fieldset--error legend.opt-field__label {
+		color: #e53e3e;
+	}
+
+	.opt-field--error input.opt-text-input,
+	.opt-field--error textarea.opt-textarea,
+	.opt-field--error input.opt-tel-input,
+	.opt-field--error input.opt-number-input,
+	.opt-group--error select.opt-select,
+	.opt-group--error input.opt-text-input,
+	.opt-group--error textarea.opt-textarea,
+	.opt-group--error input.opt-tel-input,
+	.opt-group--error input.opt-number-input,
+	.opt-fieldset--error .opt-fieldset--checkbox,
+	.opt-fieldset--error .opt-fieldset--radio {
+		border-color: #e53e3e !important;
+	}
+
+	.opt-field-error {
+		color: #e53e3e;
+		font-size: 0.82em;
+		margin-top: 0.3em;
+	}
+
+	/* =========================================================================
+	   ADMIN EDIT LINK
+	   ========================================================================= */
+
+	.opt-admin-edit-link {
+		display: inline-block;
+		font-size: 0.75em;
+		color: #888;
+		text-decoration: none;
+		margin-top: 0.25em;
+	}
+
+	.opt-admin-edit-link:hover {
+		color: #2563eb;
+		text-decoration: underline;
+	}
+
+/* =============================================================================
+   CART / CHECKOUT / ORDER — addon meta label bold
+   These live outside .opt-addon-form because WooCommerce renders them in the
+   cart table, order summary, and thank-you page — not inside our product form.
+   ============================================================================= */
+
+dl.variation dt,
+dl.variation dt strong {
+	font-weight: 700 !important;
+}
+
+.wc-item-meta dt,
+.wc-item-meta dt strong,
+.wc-item-meta .wc-item-meta-label,
+.wc-item-meta strong {
+	font-weight: 700 !important;
+}
+

@@ -1,0 +1,113 @@
+/**
+ * WordPress dependencies
+ */
+import { __ } from "@wordpress/i18n";
+
+/**
+ * External dependencies
+ */
+import { useNode } from "@craftjs/core";
+
+/**
+ * Internal dependencies
+ */
+import { Input } from "@/shadcn/components/ui";
+import { If } from "@/common/components/If";
+import { Option } from "../../components/Controls/options/types";
+import { BlockToolbox } from "../../components/BlockToolbox";
+import { cn } from "@/shadcn/lib/utils";
+import { OptionPrice } from "../../components/OptionPrice";
+import { calculatePercentage } from "../../utils";
+
+interface ComponentProps {
+    label?: string;
+    desc?: string;
+    required?: boolean;
+    options: Option[];
+    placeholder?: string;
+    pricePosition?: "with_title" | "with_option";
+    businessOnly?: boolean;
+}
+
+/**
+ * Email Component
+ *
+ * Renders a labeled email input with optional description, price display and
+ * "Business Email Only" awareness. The businessOnly flag has no visual effect
+ * in the canvas preview — it's surfaced to the frontend template for runtime
+ * validation.
+ */
+export default function Component(props: ComponentProps) {
+    const {
+        label,
+        desc,
+        required,
+        options,
+        placeholder,
+        pricePosition = "with_option",
+    } = props;
+
+    const { connectors, isActive } = useNode((node) => ({
+        isActive: node.events.selected,
+    }));
+
+    const firstOption = options?.[0];
+
+    const renderPrice = () => {
+        if (!firstOption || !firstOption.regular) return null;
+        return (
+            <span className="text-sm text-gray-500 ml-2">
+                <OptionPrice
+                    option={firstOption}
+                    calculatePercentage={calculatePercentage}
+                />
+            </span>
+        );
+    };
+
+    return (
+        <div
+            ref={(ref: HTMLElement | null) => ref && connectors.connect(ref)}
+            className={cn(
+                "flex flex-col gap-2 relative border border-dashed border-transparent hover:border-gray-400 transition-all duration-300 rounded! p-1",
+                isActive && "border-solid border-gray-400",
+            )}
+        >
+            <BlockToolbox />
+            <If condition={!!label}>
+                <label className="text-sm font-medium text-gray-700 flex items-center">
+                    {label}
+                    <If condition={!!required}>
+                        <span className="text-red-500 ml-1">*</span>
+                    </If>
+                    <If condition={pricePosition === "with_title"}>
+                        {renderPrice()}
+                    </If>
+                </label>
+            </If>
+
+            <If condition={!!desc}>
+                <p className="text-sm text-gray-500 my-0!">{desc}</p>
+            </If>
+
+            <If condition={pricePosition === "with_option"}>
+                <div className="flex items-center gap-2 w-full">
+                    <Input
+                        type="email"
+                        placeholder={placeholder}
+                        className="w-full p-2 rounded border border-gray-300 text-sm"
+                    />
+                    {renderPrice()}
+                </div>
+            </If>
+
+            <If condition={pricePosition === "with_title"}>
+                <Input
+                    type="email"
+                    placeholder={placeholder}
+                    className="w-full p-2 rounded! border border-gray-300 text-sm"
+                />
+            </If>
+        </div>
+    );
+}

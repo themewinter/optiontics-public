@@ -1,0 +1,1890 @@
+# Copyright (C) 2026 Arraytics
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Optiontics 1.0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/optiontics\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-04-23T07:32:42+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: optiontics\n"
+
+#. Plugin Name of the plugin
+#: optiontics.php
+#: core/admin/menu.php:75
+#: core/admin/menu.php:76
+#: core/integrations/dokan/vendor-dashboard.php:48
+msgid "Optiontics"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: optiontics.php
+msgid "https://themewinter.com/optiontics"
+msgstr ""
+
+#. Description of the plugin
+#: optiontics.php
+msgid "Optiontics is a plugin for WordPress that allows you to create and manage your fields."
+msgstr ""
+
+#. Author of the plugin
+#: optiontics.php
+msgid "Arraytics"
+msgstr ""
+
+#. Author URI of the plugin
+#: optiontics.php
+msgid "https://arraytics.com"
+msgstr ""
+
+#: base/abstract/base-rest-controller.php:66
+msgid "Request was successful"
+msgstr ""
+
+#. translators: %s is the name of the class that is not instantiable.
+#: base/container/container.php:36
+#, php-format
+msgid "Service provider %s not found."
+msgstr ""
+
+#. translators: %s is the name of the class that is not instantiable.
+#: base/container/container.php:86
+#, php-format
+msgid "Class: %s does not exist."
+msgstr ""
+
+#. translators: %s is the name of the class that is not instantiable.
+#: base/container/container.php:95
+#, php-format
+msgid "Class: %s is not instantiable."
+msgstr ""
+
+#. translators: %s is the name of the class that is not instantiable.
+#: base/container/container.php:133
+#, php-format
+msgid "Class: %s dependency cannot be resolved."
+msgstr ""
+
+#: base/database/post-model.php:67
+msgid "Post type mismatch."
+msgstr ""
+
+#. translators: %s is the name of the undefined property.
+#: base/database/post-model.php:120
+#: base/database/post-model.php:137
+#, php-format
+msgid "Undefined property %s"
+msgstr ""
+
+#: base/database/post-model.php:271
+#: base/database/post-model.php:316
+msgid "Invalid property provided."
+msgstr ""
+
+#: base/database/post-model.php:312
+msgid "Cannot update a non-existent post."
+msgstr ""
+
+#. translators: %s is the name of the invalid property.
+#: base/database/post-model.php:406
+#, php-format
+msgid "Invalid property provided: %s"
+msgstr ""
+
+#: core/admin/menu.php:36
+msgid "Dashboard"
+msgstr ""
+
+#: core/admin/menu.php:43
+#: core/admin/plugin-action-links.php:30
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/417.js:1
+#: assets/build/chunks/js/937.js:1
+msgid "Options"
+msgstr ""
+
+#: core/admin/menu.php:50
+msgid "Templates"
+msgstr ""
+
+#: core/admin/menu.php:57
+#: assets/build/chunks/js/773.js:1
+msgid "Settings"
+msgstr ""
+
+#: core/admin/menu.php:64
+#: assets/build/chunks/js/170.js:1
+msgid "About Us"
+msgstr ""
+
+#: core/admin/plugin-action-links.php:39
+msgid "Go Pro"
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:112
+#: core/ai/controllers/ai-controller.php:121
+msgid "Please enter a prompt describing what to build."
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:124
+msgid "Prompt is too long. Keep it under 2000 characters."
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:157
+msgid "Free Token is not configured on this site. Add your Aisentic API key under Optiontics → Settings → Free Token, or switch to another provider."
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:194
+msgid "Aisentic"
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:206
+msgid "OpenAI API key is not configured. Add it under Optiontics → Settings."
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:226
+#: assets/build/chunks/js/773.js:1
+msgid "OpenAI"
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:237
+msgid "Google Gemini API key is not configured. Add it under Optiontics → Settings."
+msgstr ""
+
+#. translators: %s: transport error message
+#: core/ai/controllers/ai-controller.php:284
+#, php-format
+msgid "Unable to reach Google Gemini: %s"
+msgstr ""
+
+#. translators: %d: HTTP status code
+#: core/ai/controllers/ai-controller.php:301
+#, php-format
+msgid "Gemini returned status %d."
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:309
+#: core/ai/controllers/ai-controller.php:511
+msgid "AI returned an empty response."
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:383
+msgid "Authentication required."
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:391
+msgid "Too many AI requests. Please wait a few minutes and try again."
+msgstr ""
+
+#. translators: 1: provider name, 2: transport error
+#: core/ai/controllers/ai-controller.php:483
+#, php-format
+msgid "Unable to reach %1$s: %2$s"
+msgstr ""
+
+#. translators: 1: provider name, 2: HTTP status
+#: core/ai/controllers/ai-controller.php:502
+#, php-format
+msgid "%1$s returned status %2$d."
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:525
+msgid "AI returned invalid JSON. Try rephrasing the prompt."
+msgstr ""
+
+#: core/ai/controllers/ai-controller.php:534
+msgid "AI response did not contain any usable fields. Try a more specific prompt."
+msgstr ""
+
+#: core/analytics/controllers/analytics-controller.php:210
+msgid "You do not have permission to access analytics."
+msgstr ""
+
+#: core/analytics/controllers/analytics-controller.php:412
+msgid "Unknown Product"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:185
+msgid "Invalid option block id"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:190
+msgid "You do not have permission to access this option block"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:215
+#: core/blocks/controllers/option-block-controller.php:243
+#: core/blocks/controllers/option-block-controller.php:280
+msgid "Invalid Option Block id"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:220
+msgid "You do not have permission to update this option block"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:248
+msgid "You do not have permission to delete this option block"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:254
+msgid "Something went wrong. Option Block could not be deleted"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:257
+msgid "Successfully deleted."
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:285
+msgid "You do not have permission to clone this option block"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:310
+msgid "Failed to clone option block."
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:333
+msgid "Untitled"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:335
+msgid "(Copy)"
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:348
+msgid "Invalid or empty Option Block IDs."
+msgstr ""
+
+#: core/blocks/controllers/option-block-controller.php:367
+msgid "Selected Option Block deleted."
+msgstr ""
+
+#. translators: 1: deleted count, 2: failed count
+#: core/blocks/controllers/option-block-controller.php:372
+#, php-format
+msgid "Deleted %1$d blocks. Failed to delete %2$d blocks due to permission restrictions."
+msgstr ""
+
+#: core/extensions/controllers/extension-controller.php:78
+msgid "Invalid type provided"
+msgstr ""
+
+#: core/extensions/controllers/plugin-controller.php:80
+msgid "Please provide a plugin name."
+msgstr ""
+
+#: core/extensions/controllers/plugin-controller.php:84
+msgid "Invalid status. Allowed: install, activate, deactivate."
+msgstr ""
+
+#: core/extensions/controllers/plugin-controller.php:105
+msgid "Plugin installation failed."
+msgstr ""
+
+#. translators: %s: action status (install, activate, or deactivate)
+#: core/extensions/controllers/plugin-controller.php:117
+#, php-format
+msgid "Plugin couldn't %s."
+msgstr ""
+
+#: core/extensions/controllers/plugin-controller.php:120
+msgid "Successfully updated."
+msgstr ""
+
+#: core/fields/templates/select.php:45
+msgid "Choose an option"
+msgstr ""
+
+#: core/integrations/dokan/vendor-dashboard.php:82
+msgid "You have no permission to view this page"
+msgstr ""
+
+#: core/integrations/woocommerce/assignment/sync.php:131
+msgid "Select Options"
+msgstr ""
+
+#: core/integrations/woocommerce/cart/cart-mutator.php:125
+msgid "Addon"
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:103
+msgid "Error retrieving brands"
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:122
+msgid "Brand not found"
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:266
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:273
+#: core/integrations/woocommerce/products/controllers/product-controller.php:406
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:266
+msgid "Current page of the collection."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:274
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:281
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:274
+msgid "Maximum number of items to be returned in result set."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:283
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:290
+#: core/integrations/woocommerce/products/controllers/product-controller.php:414
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:283
+msgid "Limit results to those matching a string."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:289
+msgid "Limit result set to brands assigned a specific parent."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:295
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:302
+#: core/integrations/woocommerce/products/controllers/product-controller.php:426
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:289
+msgid "Limit result set to specific IDs."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:303
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:310
+#: core/integrations/woocommerce/products/controllers/product-controller.php:434
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:297
+msgid "Ensure result set excludes specific IDs."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:310
+msgid "Whether to hide brands not assigned to any products."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:317
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:324
+#: core/integrations/woocommerce/products/controllers/product-controller.php:441
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:311
+msgid "Sort collection by object attribute."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-brand-controller.php:325
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:332
+#: core/integrations/woocommerce/products/controllers/product-controller.php:449
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:319
+msgid "Order sort attribute ascending or descending."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:108
+msgid "Error retrieving categories"
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:127
+msgid "Category not found"
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:296
+msgid "Limit result set to categories assigned a specific parent."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-category-controller.php:317
+msgid "Whether to hide categories not assigned to any products."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-controller.php:124
+msgid "Product not found"
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-controller.php:420
+msgid "Limit result set to products assigned a specific category ID."
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:103
+msgid "Error retrieving tags"
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:122
+msgid "Tag not found"
+msgstr ""
+
+#: core/integrations/woocommerce/products/controllers/product-tag-controller.php:304
+msgid "Whether to hide tags not assigned to any products."
+msgstr ""
+
+#: core/integrations/woocommerce/views/product-form.php:221
+msgid "Edit Addon"
+msgstr ""
+
+#: core/integrations/woocommerce/views/product-form.php:245
+msgid "Addons Price"
+msgstr ""
+
+#: core/integrations/woocommerce/views/product-form.php:247
+msgid "Total"
+msgstr ""
+
+#: core/settings/controllers/settings-controller.php:127
+msgid "No settings provided."
+msgstr ""
+
+#: core/upgrades/migration-controller.php:55
+msgid "Migration has already been completed."
+msgstr ""
+
+#: core/upgrades/migration-controller.php:60
+msgid "WPCafe plugin (version 3.0.0 or higher) is not active."
+msgstr ""
+
+#: core/upgrades/migration-controller.php:67
+msgid "No WPCafe product addons data found."
+msgstr ""
+
+#: core/upgrades/migration-controller.php:75
+msgid "WPCafe product addons migrated successfully."
+msgstr ""
+
+#. translators: %s: error message from the exception
+#: core/upgrades/migration-controller.php:80
+#, php-format
+msgid "Migration failed: %s"
+msgstr ""
+
+#: core/upgrades/migration-notice.php:64
+msgid "Migrate Your Product Addons to Optiontics"
+msgstr ""
+
+#: core/upgrades/migration-notice.php:67
+msgid "We found existing WPCafe product addons. Migrate them to Optiontics to continue managing addons smoothly."
+msgstr ""
+
+#: core/upgrades/migration-notice.php:71
+msgid "Migrate Now"
+msgstr ""
+
+#: utils/our-plugins-list.php:25
+msgid "WP Cafe"
+msgstr ""
+
+#: utils/our-plugins-list.php:26
+msgid "Complete restaurant management — food ordering, table reservation, and QR menus for WordPress."
+msgstr ""
+
+#: utils/our-plugins-list.php:35
+msgid "Eventin"
+msgstr ""
+
+#: utils/our-plugins-list.php:36
+msgid "Complete event management — create events, sell tickets, and engage attendees right from WordPress."
+msgstr ""
+
+#: utils/our-plugins-list.php:45
+msgid "Timetics"
+msgstr ""
+
+#: utils/our-plugins-list.php:46
+msgid "Smart appointment scheduling — let clients book 24/7 with calendar sync, team management, and automated reminders."
+msgstr ""
+
+#: utils/our-plugins-list.php:55
+msgid "Booktics"
+msgstr ""
+
+#: utils/our-plugins-list.php:56
+msgid "The ultimate online booking plugin for WordPress — services, staff, schedules, and payments in one place."
+msgstr ""
+
+#: utils/our-plugins-list.php:65
+msgid "Poptics"
+msgstr ""
+
+#: utils/our-plugins-list.php:66
+msgid "Popup builder for WordPress — grow your audience with beautiful, targeted popups without writing code."
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/440.js:1
+msgid "All Woo Products"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/440.js:1
+msgid "Specific Woo Products"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/440.js:1
+msgid "Specific Woo Category"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/440.js:1
+msgid "No product is assigned to this option yet."
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/440.js:1
+msgid "Publish this option first to preview it"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Edit"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "More actions"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Clone"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/440.js:1
+msgid "Delete"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Delete Addon"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Are you sure you want to delete this addon?"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/114.js:2
+msgid "Title"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Product conditions"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "All Products"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Status"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "All Options"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/773.js:1
+msgid "Active"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Draft"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Filter by status"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Delete Selected Options"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/114.js:2
+msgid "Search..."
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Rows per page "
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "of"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Previous"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Next"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/114.js:2
+msgid "No data available"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "WooCommerce Not Active"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Please activate WooCommerce to enable product-related features."
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Install & Activate"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+msgid "Option list"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/440.js:1
+msgid "Are you sure?"
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/440.js:1
+msgid "This action cannot be undone. This will permanently delete the item."
+msgstr ""
+
+#: assets/build/chunks/js/66.js:1
+#: assets/build/chunks/js/114.js:2
+#: assets/build/chunks/js/440.js:1
+msgid "Cancel"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Nothing to configure here"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "The Body is the canvas for your form. Add or select an element inside it to edit its properties."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Move block"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Set columns to 2"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Delete block"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Duplicate block"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "This feature is not currently available."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+#: assets/build/chunks/js/114.js:2
+msgid "Select a price type"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Choose Image"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Manage Items"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Image"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Option items"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Type"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Regular price"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Bulk add items"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Enter items separated by commas or new lines. Each item will be added as a new option."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+#: assets/build/chunks/js/114.js:2
+msgid "e.g \"Add engraving text option\" or \"Make it more minimal\""
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Bulk Insert"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Bulk Close"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Add Option Value"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Bulk Add"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "Show sales price"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+#: assets/build/chunks/js/114.js:2
+#: assets/build/chunks/js/440.js:1
+msgid "Close"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:1
+msgid "No options added"
+msgstr ""
+
+#. translators: %d: number of options
+#: assets/build/chunks/js/114.js:2
+#, js-format
+msgid "%d option added"
+msgid_plural "%d options added"
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Option Values"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Enter description here.."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Advanced Settings"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Appearance"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Conditional logic"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Minimum Quantity"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Maximum Quantity"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Minimum must be at least 1"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Minimum cannot exceed maximum"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Maximum must be at least 1"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Maximum cannot be less than minimum"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Is"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Not Is"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "In"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Not In"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Contains"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Not Contains"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Greater Than"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Less Than"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Greater or Equal"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Less or Equal"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select Visibility"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Show"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Hide"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "this field if"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select Match"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Any"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "All"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "of these rules match:"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select Values"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select Value"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Enter value"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select Field"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select Comparison"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select a field first"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Field"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Choose Conditional type"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Value"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Add New"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "No other fields available for conditional logic."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Field behavior conditions"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Conditional behavior"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Modify conditions"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Configure conditions"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Coming Soon"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "This feature is currently under development and will be available soon. Stay tuned for updates!"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Description"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Required"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Vertical"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Enable Quantity"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Add Minimum & Maximum quantity for this option"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Radio"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "radio"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "options"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "general"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select a tag"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "H1"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "H2"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "H3"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "H4"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "H5"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "H6"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Span"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Div"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Heading Tag"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Heading"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "heading"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select a position"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "With Title"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "With option"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Price Type"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Regular "
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Sales "
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Price Position"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Placeholder"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Text Field"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Write Something..."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Dropdown"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "select"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Select an option"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Checkbox"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "checkbox"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Toggle switch"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Check by default"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Switch Label"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Switch Option 1"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Checked by default"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Add Minimum & Minimum quantity for this option"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Switch"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "switch"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "toggle"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Minimum Value"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Maximum Value"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Number"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Minimum Characters"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Maximum Characters"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Textarea"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Selection mode"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Single"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Multiple"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Button Group"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "button"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "group"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Button group"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Option 1"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Option 2"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Option 3"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Business Email Only"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Email"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "you@example.com"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Fixed"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Percentage"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "No cost"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Help docs"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Support Ticket"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Sorry, the page you visited does not exist."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Go Home"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Type to search or create..."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Create:"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "No results found"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "more"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "If you’re seeing this unexpectedly, try refreshing the page:"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Windows:"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Mac:"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Ooops! Something's Wrong. "
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Please try again or let us know if the issue's still here."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Try Again"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Pro"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Upgrade to pro"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Build with AI"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Not quite right? Describe what you want"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "AI can make mistakes. Review and adjust generated options as needed."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Generate"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+#: assets/build/chunks/js/773.js:1
+msgid "Select"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "more field"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Use this"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Pick an option set to get started"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Each suggestion is tailored to your products. Select one to open it in the editor, or refine below."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "AI response did not contain any fields. Try a more specific prompt."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Generated Options"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "AI response did not contain any usable fields."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Generation failed. Please try again."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "AI provider not configured"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Set up an AI provider in settings before generating options."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Go to Settings"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "How would you like to create your option set?"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Choose one way to get started. You can use AI, select a template, or create everything yourself."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+#: assets/build/chunks/js/440.js:1
+msgid "Select Template"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Choose a ready-made template for your option set."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Start from Scratch"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Create a blank option set and build it your way."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Create with AI"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Let AI help you build your option set quickly."
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Add Options"
+msgstr ""
+
+#: assets/build/chunks/js/114.js:2
+msgid "Please select a valid file."
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "About Our Company"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Arraytics is a software company founded in 2013, specializing in WordPress, AI, Machine Learning, SaaS, and mobile applications. We're committed to delivering high-quality tech solutions that help businesses grow and simplify people's lives."
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Today, our products are trusted by nearly 70,000 customers across 120+ countries, powered by a passionate team of 30+ experts with over 12 years of industry experience. We're proud to be a Level 12 author on Envato."
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "About Image"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Smart AI Booking — Let clients book 24/7 without back-and-forth emails"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Multi-Calendar Sync — Google, Outlook & iCal synced in real time"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Team Scheduling — Assign staff, manage availability across your whole team"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Automated Reminders — Reduce no-shows with SMS & email notifications"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Analytics Dashboard — Track revenue, peak hours & booking trends"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Our SaaS"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "AI-Powered Scheduling"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Timetics AI"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Timetics AI is your intelligent appointment scheduling assistant. Automate bookings, sync calendars, manage services, and delight your clients — all in one place."
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Get Started Free"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Learn more"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Timetics AI — Appointment Scheduling"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Deactivate"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Activate"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Install"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Install Now"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Read More"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Tutorial"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Our Plugins"
+msgstr ""
+
+#: assets/build/chunks/js/170.js:1
+msgid "Powerful tools built for WordPress, trusted by thousands of businesses worldwide."
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "All Days"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "30 Days"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "7 Days"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Today"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "from last period"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "All time"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Revenue"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Revenue from Options"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Product"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Orders"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Growth"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Product-wise Performance"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "No product data for this period."
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Analytics"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Total Option Sets"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Total number of option sets created in your store."
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Active Option Sets"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Option sets currently published and visible to customers."
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Products Using Options"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Number of products that have at least one option set assigned."
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Revenue with Options"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Total revenue generated from orders that included custom options."
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Orders with Options"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Number of orders where customers selected at least one custom option."
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Conversion Rate"
+msgstr ""
+
+#: assets/build/chunks/js/417.js:1
+msgid "Percentage of orders that included custom options out of all orders."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Exclude Specific Products"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Select Specific Product"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Select Category"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Edit Product Selection"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Product Type"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Update the product type and related configuration for this addon option."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Updating..."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Update"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Save changes"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Publish"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Switch to Draft"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Delete Option"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Are you sure you want to delete this option?"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Saving..."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Save Draft"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Untitled Option"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Set Feature Image"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+#, js-format
+msgid "Edit %s"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Control Panel"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "No block selected"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Click on a component to start editing."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Click on a block in the canvas to view and edit its properties."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Add Elements"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Use template"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+#: assets/build/chunks/js/937.js:1
+msgid "No templates found."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+#: assets/build/chunks/js/937.js:1
+msgid "Failed to load templates. Please try again."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Option Templates"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Search templates..."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Desktop view"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Mobile view"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+#: assets/build/chunks/js/937.js:1
+msgid "Preview"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "Product Title Here"
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "This is a preview of how the product options will appear on the product page. Use the 'Add Elements' button to add option blocks and configure their settings."
+msgstr ""
+
+#: assets/build/chunks/js/440.js:1
+msgid "No blocks found."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Free Token"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Free AI-powered assistant — no credit card required."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Free Token API Key"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Enter your Free Token API key to enable AI-powered features. Create a free account to generate your key."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Google Gemini"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Google's multimodal AI — ideal for complex reasoning and rich content."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Google API Key"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Enter your Google API key to enable Gemini models. You can generate a key from Google AI Studio."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Gemini 3.1 Pro"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Frontier intelligence for complex reasoning and agentic tasks."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Gemini 2.5 Flash"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Faster, cost-efficient model for everyday prompts."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "OpenAI's powerful GPT models — reliable and versatile for any task."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "OpenAI API Key"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Enter your OpenAI API key to enable GPT models. You can find or create your key in the OpenAI Platform dashboard."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "GPT-5.2"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Best general-purpose & agentic model with fast responses"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "GPT-4o"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Balanced model for everyday production workloads."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Inactive"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Selected"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Select AI Model"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Choose a model"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Enter API key"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Get API Key"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Saving…"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Save Configuration"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "AI Provider"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Choose your preferred AI model provider"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Configuration"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Integrations coming soon"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Third-party integrations will be configured from this panel. WooCommerce and Dokan are wired up automatically — no setup needed here."
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "General"
+msgstr ""
+
+#: assets/build/chunks/js/773.js:1
+msgid "Integrations"
+msgstr ""
+
+#: assets/build/chunks/js/937.js:1
+msgid "Enter template name"
+msgstr ""
+
+#: assets/build/chunks/js/937.js:1
+msgid "Use This"
+msgstr ""
+
+#: assets/build/chunks/js/937.js:1
+msgid "View"
+msgstr ""
+
+#: assets/build/chunks/js/937.js:1
+msgid "Try a different search term."
+msgstr ""
+
+#: assets/build/chunks/js/937.js:1
+msgid "Live Preview"
+msgstr ""
+
+#: assets/build/chunks/js/937.js:1
+msgid "No template selected"
+msgstr ""
+
+#: assets/build/chunks/js/937.js:1
+msgid "Click a template card to preview it here"
+msgstr ""
+
+#: assets/build/chunks/js/937.js:1
+msgid "Optiontics Template"
+msgstr ""

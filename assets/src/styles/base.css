@@ -1,0 +1,43 @@
+@import "./global";
+
+body.toplevel_page_optiontics,
+body.dokan-dashboard {
+    @apply font-system bg-neutral-100;
+}
+
+.wpc-reservation-form-root {
+    @apply font-system;
+}
+
+.toplevel_page_optiontics #wpcontent,
+.dokan-dashboard #wpcontent {
+    @apply p-0;
+}
+
+.toplevel_page_optiontics *,
+.dokan-dashboard *,
+.toplevel_page_optiontics ::before,
+.dokan-dashboard ::before,
+.toplevel_page_optiontics ::after,
+.dokan-dashboard ::after {
+    box-sizing: border-box;
+}
+
+.toplevel_page_optiontics img,
+.dokan-dashboard img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.toplevel_page_optiontics ul,
+.dokan-dashboard ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toplevel_page_optiontics .flt-btn,
+.dokan-dashboard .flt-btn {
+    @apply font-medium text-base;
+}

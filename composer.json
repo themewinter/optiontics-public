@@ -1,0 +1,42 @@
+{
+    "name": "arraytics/optiontics",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/themewinter/tools-sdk"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "base/",
+            "core/"
+        ],
+        "files": [
+            "utils/functions.php",
+            "utils/plugin-icon.php",
+            "utils/our-plugins-list.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Arraytics"
+        }
+    ],
+    "scripts": {
+        "test": "php tests/phpunit-runner.php --no-coverage",
+        "test:coverage": "php tests/phpunit-runner.php"
+    },
+    "require": {
+        "arraytics/tools-sdk": "dev-main"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Optiontics\\Tests\\": "tests/"
+        }
+    }
+}

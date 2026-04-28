@@ -1,0 +1,1 @@
+!function(n){"use strict";n(document).ready(function(){if("undefined"!=typeof optionticsDokanAddons&&optionticsDokanAddons.items){var t=optionticsDokanAddons.items;n.each(t,function(t,i){var o=n('tr[data-order_item_id="'+t+'"]');if(o.length>0){var d=o.find("td.name");d.length>0&&d.append('<div class="optiontics-addons">'+i+"</div>")}})}})}(jQuery);

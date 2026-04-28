@@ -1,0 +1,483 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "sonner/dist/styles.css";
+
+@custom-variant dark (&:is(.dark *));
+
+.toplevel_page_optiontics,
+.dokan-dashboard,
+.optiontics-active,
+#optiontics-vendor-dashboard,
+.opt-select-box-options .opt-checkbox,
+.opt-dialog-overlay,
+[role="dialog"] {
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: #09090b;
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary-foreground: #ffffff;
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: #71717a;
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  --background: #ffffff;
+
+  /* Brand Colors (Primary) */
+  --primary: #4a3bd6;
+  --primary-400: #5252c3;
+  --primary-300: #5242bd;
+  --primary-200: #5e50ad;
+  --primary-100: #eeeafe;
+
+  /* Base Colors */
+  --black: #1a1a1a;
+  --white: #ffffff;
+
+  /* Neutral Grays */
+  --neutral-600: #1d222b;
+  --neutral-500: #414454;
+  --neutral-400: #6b7280;
+  --neutral-300: #e6e6f0;
+  --neutral-200: #eff0f6;
+  --neutral-100: #f6f8f9;
+  --neutral-light: #525266;
+  --neutral-light-dark: #36364d;
+
+  /* Data Visual Colors */
+  --visual-400: #a5a9be;
+  --visual-300: #d6d5df;
+  --visual-200: #f8f8f8;
+  --visual-100: #f6f6f6;
+
+  /* Semantic Colors */
+  --success: #10b981;
+  --info: #0ea5e9;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --table-row-bg: #fd6cad03;
+
+  /* ── Optiontics UI Design Tokens (Figma) ── */
+  /* Light mode. Override in .dark block for dark mode compatibility. */
+  --opt-primary: #4a3bd6;
+  --opt-primary-hover: #3b2dc0;
+  --opt-primary-soft: #f2e8ff;
+  --opt-primary-soft-text: #4a3bd6;
+  --opt-info: #3b82f6;
+  --opt-info-soft: #e8f1ff;
+  --opt-secondary-soft: #f3f4f6;
+  --opt-border: #cbd8ea;
+  --opt-text-default: #0b1420;
+  --opt-text-secondary: #373360;
+  --opt-text-tertiary: #6d6d6d;
+  --opt-text-placeholder: #5c728d;
+  --opt-switch-active: #2563eb;
+  --opt-switch-inactive: #e5e7eb;
+  --opt-white: #ffffff;
+  --opt-page-bg: #f6f6f7;
+  --opt-card-bg: #ffffff;
+  --opt-header-bg: #f3f4f6;
+  --opt-row-hover: #f9fafb;
+  --opt-action-btn-bg: #f3f4f6;
+  --opt-action-btn-color: #373360;
+  /* New Tokens for Creation Cards & Badges */
+  --opt-primary-softest: #f7f5ff;
+  --opt-primary-soft-border: #b7b1ee;
+  --opt-border-muted: #d9dde3;
+  --opt-text-title: #202223;
+  --opt-text-icon: #7d8492;
+  --opt-badge-warning: #f8a926;
+}
+
+.toplevel_page_optiontics .dark,
+.dokan-dashboard .dark,
+.optiontics-active.dark,
+#optiontics-vendor-dashboard.dark,
+.opt-select-box-options .opt-checkbox.dark,
+[role="dialog"].dark .opt-dialog-overlay.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+
+  --table-row-bg: #fd6cad03;
+
+  /* ── Optiontics UI Design Tokens — dark mode overrides ── */
+  --opt-primary: #6d5cf0;
+  --opt-primary-hover: #7d6ef5;
+  --opt-primary-soft: #2a1f5e;
+  --opt-primary-soft-text: #a89cf7;
+  --opt-info: #60a5fa;
+  --opt-info-soft: #1e3a5f;
+  --opt-secondary-soft: #1f2937;
+  --opt-border: #374151;
+  --opt-text-default: #f9fafb;
+  --opt-text-secondary: #d1d5db;
+  --opt-text-tertiary: #9ca3af;
+  --opt-text-placeholder: #6b7280;
+  --opt-switch-active: #3b82f6;
+  --opt-switch-inactive: #374151;
+  --opt-page-bg: #111827;
+  --opt-card-bg: #1f2937;
+  --opt-header-bg: #1f2937;
+  --opt-row-hover: #1a2332;
+  --opt-action-btn-bg: #1f2937;
+  /* Dark Mode Overrides for New Tokens */
+  --opt-primary-softest: #1a2332;
+  --opt-primary-soft-border: #4f46e5;
+  --opt-border-muted: #374151;
+  --opt-text-title: #f9fafb;
+  --opt-text-icon: #9ca3af;
+  --opt-badge-warning: #f59e0b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--visual-400);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Brand Colors (Primary) */
+  --color-primary: var(--primary);
+  --color-primary-400: var(--primary-400);
+  --color-primary-300: var(--primary-300);
+  --color-primary-200: var(--primary-200);
+  --color-primary-100: var(--primary-100);
+
+  /* Base Colors */
+  --color-black: var(--black);
+  --color-white: var(--white);
+
+  /* Neutral Grays */
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-light: var(--neutral-light);
+  --color-neutral-light-dark: var(--neutral-light-dark);
+
+  /* Data Visual Colors */
+  --color-visual-400: var(--visual-400);
+  --color-visual-300: var(--visual-300);
+  --color-visual-200: var(--visual-200);
+  --color-visual-100: var(--visual-100);
+
+  /* Semantic Colors */
+  --color-success: var(--success);
+  --color-info: var(--info);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  --color-concitional-stock: #e4e4e7;
+  --color-light-gray: #fcfcfc;
+
+  /* Tooltip Colors */
+  --color-tooltip-bg: #000000;
+  --color-tooltip-text: #ffffff;
+  --color-tooltip-border: #374151;
+
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+@layer base {
+  .toplevel_page_optiontics,
+  .dokan-dashboard,
+  .toplevel_page_optiontics *,
+  .dokan-dashboard *,
+  .toplevel_page_optiontics ::before,
+  .dokan-dashboard ::before,
+  .toplevel_page_optiontics ::after,
+  .dokan-dashboard ::after,
+  .optiontics-active,
+  .optiontics-active *,
+  .optiontics-active ::before,
+  .optiontics-active ::after,
+  #optiontics-vendor-dashboard,
+  #optiontics-vendor-dashboard *,
+  #optiontics-vendor-dashboard ::before,
+  #optiontics-vendor-dashboard ::after,
+  .wpc-reservation-form-root * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply pointer-events-auto!;
+  }
+  body.toplevel_page_optiontics,
+  body.dokan-dashboard,
+  .optiontics-active,
+  body#optiontics-vendor-dashboard {
+    @apply bg-background text-foreground;
+  }
+  body.toplevel_page_optiontics img,
+  body.dokan-dashboard img,
+  .optiontics-active img,
+  #optiontics-vendor-dashboard img {
+    @apply max-w-full h-auto block object-cover;
+  }
+  body.toplevel_page_optiontics ul,
+  body.dokan-dashboard ul,
+  .optiontics-active ul,
+  #optiontics-vendor-dashboard ul {
+    @apply list-none m-0 p-0;
+  }
+}
+
+@layer components {
+  /* Input placeholder styling  */
+  .toplevel_page_optiontics input::placeholder,
+  .toplevel_page_optiontics textarea::placeholder,
+  .dokan-dashboard input::placeholder,
+  .dokan-dashboard textarea::placeholder,
+  .optiontics-active input::placeholder,
+  .optiontics-active textarea::placeholder,
+  #optiontics-vendor-dashboard input::placeholder,
+  #optiontics-vendor-dashboard textarea::placeholder {
+    color: #b4b1b1 !important;
+  }
+
+  /* Scrollbar styling */
+  /* Custom scrollbar for all scrollable elements in WP Cafe admin */
+
+  .toplevel_page_optiontics ::-webkit-scrollbar,
+  .dokan-dashboard ::-webkit-scrollbar,
+  .optiontics-active ::-webkit-scrollbar,
+  #optiontics-vendor-dashboard ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+  }
+
+  .toplevel_page_optiontics ::-webkit-scrollbar-track,
+  .dokan-dashboard ::-webkit-scrollbar-track,
+  .optiontics-active ::-webkit-scrollbar-track,
+  #optiontics-vendor-dashboard ::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    /* border-radius: 3px; */
+  }
+
+  .toplevel_page_optiontics ::-webkit-scrollbar-thumb,
+  .dokan-dashboard ::-webkit-scrollbar-thumb,
+  .optiontics-active ::-webkit-scrollbar-thumb,
+  #optiontics-vendor-dashboard ::-webkit-scrollbar-thumb {
+    background-color: var(--visual-400);
+    border-radius: 3px;
+    border: 1px solid #f5f5f5;
+    transition: background-color 0.2s ease;
+  }
+
+  .toplevel_page_optiontics ::-webkit-scrollbar-thumb:hover,
+  .dokan-dashboard ::-webkit-scrollbar-thumb:hover,
+  .optiontics-active ::-webkit-scrollbar-thumb:hover,
+  #optiontics-vendor-dashboard ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--visual-400);
+  }
+  .toplevel_page_optiontics,
+  .dokan-dashboard,
+  .optiontics-active,
+  #optiontics-vendor-dashboard {
+    .flt-btn {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .wcf-custom-shadow {
+      box-shadow:
+        0 1px 2px 0 rgba(0, 0, 0, 0.1),
+        0 1px 1px 0 rgba(0, 0, 0, 0.06);
+    }
+  }
+  /* Drawer Z-Index Overrides */
+  .toplevel_page_optiontics [data-vaul-drawer],
+  .dokan-dashboard [data-vaul-drawer],
+  #optiontics-vendor-dashboard [data-vaul-drawer] {
+    z-index: 99999 !important;
+  }
+
+  .toplevel_page_optiontics [data-vaul-overlay],
+  .dokan-dashboard [data-vaul-overlay],
+  #optiontics-vendor-dashboard [data-vaul-overlay] {
+    z-index: 9999 !important;
+  }
+  /* Selected block border styling */
+  .component-selected {
+    outline: 1px solid var(--primary) !important;
+    outline-offset: 1px !important;
+    border-radius: 4px !important;
+  }
+
+  .toplevel_page_optiontics input[type="date"]:focus,
+  .toplevel_page_optiontics input[type="datetime-local"]:focus,
+  .toplevel_page_optiontics input[type="datetime"]:focus,
+  .toplevel_page_optiontics input[type="email"]:focus,
+  .toplevel_page_optiontics input[type="month"]:focus,
+  .toplevel_page_optiontics input[type="number"]:focus,
+  .toplevel_page_optiontics input[type="password"]:focus,
+  .toplevel_page_optiontics input[type="search"]:focus,
+  .toplevel_page_optiontics input[type="tel"]:focus,
+  .toplevel_page_optiontics input[type="text"]:focus,
+  .toplevel_page_optiontics input[type="time"]:focus,
+  .toplevel_page_optiontics input[type="url"]:focus,
+  .toplevel_page_optiontics input[type="week"]:focus,
+  .dokan-dashboard input[type="date"]:focus,
+  .dokan-dashboard input[type="datetime-local"]:focus,
+  .dokan-dashboard input[type="datetime"]:focus,
+  .dokan-dashboard input[type="email"]:focus,
+  .dokan-dashboard input[type="month"]:focus,
+  .dokan-dashboard input[type="number"]:focus,
+  .dokan-dashboard input[type="password"]:focus,
+  .dokan-dashboard input[type="search"]:focus,
+  .dokan-dashboard input[type="tel"]:focus,
+  .dokan-dashboard input[type="text"]:focus,
+  .dokan-dashboard input[type="time"]:focus,
+  .dokan-dashboard input[type="url"]:focus,
+  .dokan-dashboard input[type="week"]:focus,
+  #optiontics-vendor-dashboard input[type="date"]:focus,
+  #optiontics-vendor-dashboard input[type="datetime-local"]:focus,
+  #optiontics-vendor-dashboard input[type="datetime"]:focus,
+  #optiontics-vendor-dashboard input[type="email"]:focus,
+  #optiontics-vendor-dashboard input[type="month"]:focus,
+  #optiontics-vendor-dashboard input[type="number"]:focus,
+  #optiontics-vendor-dashboard input[type="password"]:focus,
+  #optiontics-vendor-dashboard input[type="search"]:focus,
+  #optiontics-vendor-dashboard input[type="tel"]:focus,
+  #optiontics-vendor-dashboard input[type="text"]:focus,
+  #optiontics-vendor-dashboard input[type="time"]:focus,
+  #optiontics-vendor-dashboard input[type="url"]:focus,
+  #optiontics-vendor-dashboard input[type="week"]:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .optiontics-builder-active {
+    padding-top: 0 !important;
+  }
+
+  .optiontics-builder-active #adminmenumain,
+  .optiontics-builder-active #adminmenuback,
+  .optiontics-builder-active #adminmenuwrap,
+  .optiontics-builder-active #wpadminbar,
+  .optiontics-builder-active #wpfooter {
+    display: none !important;
+  }
+
+  .optiontics-builder-active #wpcontent {
+    margin-left: 0 !important;
+  }
+
+  .optiontics-builder-active #wpfooter {
+    margin-left: 0 !important;
+  }
+
+  .optiontics-builder-active #wpbody-content {
+    padding: 0 !important;
+  }
+  .toplevel_page_optiontics #adminmenu .wp-menu-image img,
+  .dokan-dashboard #adminmenu .wp-menu-image img {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    margin: 0 auto !important;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .display-none {
+    display: none;
+  }
+}
